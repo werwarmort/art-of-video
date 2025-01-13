@@ -1,8 +1,10 @@
 module.exports = {
   extends: ['stylelint-config-standard'],
-  plugins: ['stylelint-order'],
+  plugins: ['stylelint-order', 'stylelint-scss'],
   rules: {
     'selector-class-pattern': '^[a-z][a-zA-Z0-9]+$', // разрешить camelCase для модульных стилей
+    'media-query-no-invalid': null, // Отключить стандартное правило
+    'scss/media-query-no-missing-interpolation': true, // Проверка SCSS-медиазапросов
     'order/properties-order': [
       'content',
       'z-index',
