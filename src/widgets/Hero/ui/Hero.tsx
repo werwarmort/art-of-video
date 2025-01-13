@@ -7,7 +7,7 @@ const HeroComponent = () => {
       <video className={styles.backgroundVideo} src="/videos/wedding.mp4" autoPlay loop muted />
       <div className={styles.overlay} />
       <nav className={styles.headerMenu}>
-        <div>L</div>
+        <div className={styles.logo}>L</div>
         <ul className={styles.menuList}>
           <li className={styles.menuListItem}>Обо мне</li>
           <li className={styles.menuListItem}>Тарифы</li>
@@ -25,6 +25,14 @@ const HeroComponent = () => {
           Хранитель самых <br /> ярких и теплых моментов
         </h2>
         <h3 className={styles.textSubtitle}>Профессиональный видиограф Александр Ясаков</h3>
+        <button className={styles.orderButton}>Заказать съемку</button>
+        <nav className={styles.mobileMenu}>
+          <ul className={styles.menuListMobile}>
+            <li className={styles.menuListMobileItem}>Обо мне</li>
+            <li className={styles.menuListMobileItem}>портфолио</li>
+            <li className={styles.menuListMobileItem}>тарифы</li>
+          </ul>
+        </nav>
       </div>
     </div>
   );

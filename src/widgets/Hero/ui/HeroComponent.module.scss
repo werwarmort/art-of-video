@@ -1,3 +1,5 @@
+@use 'src/shared/styles/variables' as *;
+
 .heroComponentRoot {
   position: relative;
   width: 100vw;
@@ -29,6 +31,12 @@
   position: absolute;
   top: 40%;
   left: 10%;
+
+  @media (max-width: $tablet-large) {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  };
 }
 
 .textTitle {
@@ -39,6 +47,20 @@
   text-align: center;
   color: white;
 
+  @media (max-width: $sm-laptop) {
+    font-size: 32px;
+    letter-spacing: 2px;
+  };
+
+  @media (max-width: $tablet-large) {
+    width: 340px;
+  };
+
+  @media (max-width: $mobile) {
+    width: 320px;
+    font-size: 26px;
+  };
+
   &::before {
     content: '';
     position: absolute;
@@ -46,16 +68,53 @@
     transform: translateX(-50%);
     width: 50%;
     height: 1px;
-    background: white;
+    background: rgb(255 255 255 / 49%);
     bottom: -15px;
-    
+
+    @media (max-width: $mobile) {
+      width: 70%;
+    };
   }
 }
 
 .textSubtitle {
   margin-top: 30px;
+  letter-spacing: 1px;
   text-align: center;
   font-weight: 300;
+
+  @media (max-width: $sm-laptop) {
+    font-size: 14px;
+    letter-spacing: 2px;
+  };
+
+  @media (max-width: $tablet-large) {
+    width: 300px;
+    margin: 30px auto 0;
+  };
+}
+
+.orderButton {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 18px;
+  background: transparent;
+  border: 1px solid rgb(255 255 255 / 66%);
+  border-radius: 4px;
+  transition: .3s all ease-in-out;
+
+  @media (max-width: $tablet-large) {
+    display: none;
+  }
+
+  &:hover {
+    background: white;
+    color: black;
+    border: 1px solid transparent;
+  }
 }
 
 .headerMenu {
@@ -68,18 +127,45 @@
   transform: translateX(-50%);
   width: 90vw;
   color: white;
+
+  @media (max-width: $tablet-large) {
+    justify-content: center;
+  };
 }
 
 .menuList {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $tablet-large) {
+    display: none;
+  };
+
+  .menuListItem {
+    margin-right: 40px;
+    font-size: 16px;
+    list-style-type: none;
+    white-space: nowrap;
+
+    @media (max-width: $sm-laptop) {
+      margin-right: 22px;
+      font-size: 14px;
+    };
+  }
 }
 
-.menuListItem {
-  margin-right: 40px;
-  font-size: 16px;
-  list-style-type: none;
-  white-space: nowrap;
+.logo {
+  @media (max-width: $sm-laptop) {
+    font-size: 14px;
+  };
+
+  @media (max-width: $tablet-large) {
+    margin-right: 50px;
+  };
+
+  @media (max-width: $mobile) {
+    display: none;
+  };
 }
 
 .personalInfo {
@@ -89,6 +175,15 @@
 .location {
   position: relative;
   margin-right: 70px;
+
+  @media (max-width: $sm-laptop) {
+    margin-right: 50px;
+    font-size: 14px;
+  };
+
+  @media (max-width: $mobile) {
+    margin-left: 22px;
+  };
 
   &::after {
     content: '';
@@ -100,12 +195,22 @@
     height: 20px; /* Размер иконки */
     background: url('/assets/geo.svg') no-repeat; /* Путь к иконке */ // todo: решить проблему: работает, но ругается
     background-size: contain;
+
+    @media (max-width: $sm-laptop) {
+      top: 1px;
+      left: -22px;
+      width: 15px;
+      height: 15px;
+    };
   }
 }
 
 .phoneNumber {
   position: relative;
-  margin-right: 70px;
+
+  @media (max-width: $sm-laptop) {
+    font-size: 14px;
+  };
 
   &::after {
     content: '';
@@ -117,5 +222,36 @@
     height: 22px; /* Размер иконки */
     background: url('/assets/phone.svg') no-repeat; /* Путь к иконке */ // todo: решить проблему: работает, но ругается
     background-size: contain;
+
+    @media (max-width: $sm-laptop) {
+      top: 1px;
+      left: -22px;
+      width: 18px;
+      height: 18px;
+    };
+  }
+}
+
+.mobileMenu {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: $tablet-large) {
+    display: block;
+  };
+
+  .menuListMobile {
+    display: flex;
+    margin-top: 20px;
+    list-style-type: none;
+    gap: 20px;
+
+    .menuListMobileItem {
+      font-size: 14px;
+      white-space: nowrap;
+      text-decoration: underline;
+    }
   }
 }
