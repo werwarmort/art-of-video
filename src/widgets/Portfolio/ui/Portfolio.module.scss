@@ -1,0 +1,67 @@
+@use 'src/shared/styles/variables' as *;
+
+.portfolioRoot {
+  width: 100vw;
+  height: 100vh;
+}
+
+.portfolioWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: auto 0;
+}
+
+.portfolioTitle {
+  margin-bottom: 20px;
+  font-size: 42px;
+  letter-spacing: 2px;
+  color: white;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 1vh;
+    font-size: 26px;
+  }
+}
+
+.videosWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  .video {
+    iframe {
+      border: 1px solid rgb(255 255 255 / 14%);
+      width: 38.5vw;
+      height: 22vw;
+
+      @media (max-width: $mobile) {
+        width: 76vw;
+        height: 35vw;
+        gap: 15px;
+      }
+    }
+  }
+  
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+}
+
+.moreVideoLink {
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+  text-decoration: underline;
+
+  @media (max-width: $mobile) {
+    margin-top: 1vh;
+    font-size: 14px;
+  }
+}
+

@@ -4,7 +4,7 @@ module.exports = {
   rules: {
     'selector-class-pattern': '^[a-z][a-zA-Z0-9]+$', // разрешить camelCase для модульных стилей
     'media-query-no-invalid': false, // Отключить стандартное правило для проверки медиазапросов
-    'scss/media-query-no-missing-interpolation': false, // Проверка SCSS-медиазапросов
+    'scss/media-query-no-missing-interpolation': null, // Проверка SCSS-медиазапросов
     'order/properties-order': [
       'content',
       'z-index',
