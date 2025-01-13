@@ -7,6 +7,7 @@ const HeroComponent = () => {
       <video className={styles.backgroundVideo} src="/videos/wedding.mp4" autoPlay loop muted />
       <div className={styles.overlay} />
       <nav className={styles.headerMenu}>
+        <div>L</div>
         <ul className={styles.menuList}>
           <li className={styles.menuListItem}>Обо мне</li>
           <li className={styles.menuListItem}>Тарифы</li>
@@ -14,6 +15,10 @@ const HeroComponent = () => {
           <li className={styles.menuListItem}>Отзывы</li>
           <li className={styles.menuListItem}>Связаться со мной</li>
         </ul>
+        <div className={styles.personalInfo}>
+          <span className={styles.location}>Воронеж</span>
+          <span className={styles.phoneNumber}>+7 (777) 777 77 77</span>
+        </div>
       </nav>
       <div className={styles.textBlock}>
         <h2 className={styles.textTitle}>
