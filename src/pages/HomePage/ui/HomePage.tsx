@@ -1,9 +1,10 @@
 import React from 'react';
+import Hero from '@/widgets/Hero';
 
 const HomePage = () => {
   return (
     <div>
-      HomePage
+      <Hero />
     </div>
   );
 };
