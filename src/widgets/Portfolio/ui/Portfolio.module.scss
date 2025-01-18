@@ -32,24 +32,24 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+  }
+
   .video {
     iframe {
       border: 1px solid rgb(255 255 255 / 14%);
       width: 38.5vw;
-      height: 22vw;
+      height: 35vh;
 
       @media (max-width: $mobile) {
         width: 76vw;
-        height: 35vw;
+        height: 20vh;
         gap: 15px;
       }
     }
-  }
-  
-  @media (max-width: $mobile) {
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
   }
 }
 
