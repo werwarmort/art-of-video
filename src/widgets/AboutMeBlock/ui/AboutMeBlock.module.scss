@@ -1,0 +1,61 @@
+@use 'src/shared/styles/variables' as *;
+
+.AboutMeBlockWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60vh;
+  border: 1px solid red;
+}
+
+.content {
+  width: 80%;
+  //height: 90%;
+  border: 1px solid blue;
+}
+
+.aboutMeInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstBlock {
+  display: grid;
+  width: 49.5%;
+  height: 50vh;
+  border: 1px solid red;
+  grid-template-columns: 59% 39%;
+  grid-template-rows: 69% 29%;
+  gap: 2%;
+
+  div {
+    border: 1px solid yellow;
+  }
+
+  div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .firstText {
+    font-size: 1.2vw;
+  }
+}
+
+.secondBlock {
+  display: grid;
+  width: 49.5%;
+  height: 50vh;
+  border: 1px solid red;
+  grid-template-columns: 59% 39%;
+  grid-template-rows: 29% 69%;
+  gap: 2%;
+
+  div {
+    border: 1px solid yellow;
+  }
+
+  div:first-child {
+    grid-column: 1 / -1;
+  }
+}

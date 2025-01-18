@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '@/widgets/Hero';
 import Portfolio from '@/widgets/Portfolio';
 import TarifsComponent from '@/widgets/TarifsBlock';
+import AboutMeBlock from '@/widgets/AboutMeBlock';
 
 const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage = () => {
       <Hero />
       <Portfolio />
       <TarifsComponent />
+      <AboutMeBlock />
     </div>
   );
 };
