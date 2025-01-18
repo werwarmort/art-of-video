@@ -1,0 +1,128 @@
+@use 'src/shared/styles/variables' as *;
+
+.tarifsWrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 7vh auto;
+}
+
+.tarifsTitle {
+  margin-bottom: 20px;
+  font-size: 42px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.tarifsList {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $sm-laptop) {
+    flex-direction: column;
+  };
+}
+
+.tarifsItem {
+  width: 32%;
+  height: 80vh;
+
+  @media (max-width: $sm-laptop) {
+    width: 100%;
+    height: 29vh;
+  };
+}
+
+.tarifsContentMainInfo {
+  @media (max-width: $mobile) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.tarifsContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70vh;
+  padding: 20px;
+  border: 1px solid rgb(255 255 255 / 66%);
+  border-radius: 4px;
+  gap: 20px;
+
+  @media (max-width: $sm-laptop) {
+    justify-content: space-between;
+    flex-direction: row;
+    height: 21vh;
+    padding: 20px 2vw;
+  };
+
+  .tarifsItemTitle {
+    @media (max-width: $sm-laptop) {
+      margin-bottom: 5px;
+      font-size: 1.8vh;
+    };
+
+    @media (max-width: $mobile) {
+      margin-bottom: 1.3vh;
+      font-size: 2.3vh;
+    }
+  }
+
+  .tarifsBullets {
+    @media (max-width: $sm-laptop) {
+      font-size: 1.5vh;
+    };
+
+    @media (max-width: $mobile) {
+      line-height: 1.8vh;
+    }
+  }
+
+  .tarifsItemSideInfo {
+    @media (max-width: $sm-laptop) {
+      display: none;
+    };
+  }
+
+  .tarifsPhoto {
+    border: 1px solid rgb(255 255 255 / 66%);
+    height: 50%;
+
+    @media (max-width: $sm-laptop) {
+      width: 40%;
+      height: 100%;
+    };
+
+    @media (max-width: $mobile) {
+      display: none;
+    };
+  }
+}
+
+.tarifsButton {
+  width: 100%;
+  margin-top: 2vh;
+  padding: 10px 15px;
+  font-size: 18px;
+  background: transparent;
+  border: 1px solid rgb(255 255 255 / 66%);
+  border-radius: 4px;
+  transition: .3s all ease-in-out;
+
+  @media (max-width: $sm-laptop) {
+    margin-top: 1vh;
+  };
+
+  &:hover {
+    background: white;
+    color: black;
+    border: 1px solid transparent;
+  }
+}
+
