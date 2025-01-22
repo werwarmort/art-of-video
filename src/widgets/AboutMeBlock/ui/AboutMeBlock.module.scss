@@ -24,13 +24,13 @@
   display: grid;
   width: 49.5%;
   height: 50vh;
-  border: 1px solid red;
+  //border: 1px solid red;
   grid-template-columns: 59% 39%;
   grid-template-rows: 69% 29%;
   gap: 2%;
 
   div {
-    border: 1px solid yellow;
+    //border: 1px solid yellow;
   }
 
   div:last-child {
@@ -52,7 +52,7 @@
   gap: 2%;
 
   div {
-    border: 1px solid yellow;
+    //border: 1px solid yellow;
   }
 
   div:first-child {
