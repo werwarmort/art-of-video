@@ -1,61 +1,191 @@
 @use 'src/shared/styles/variables' as *;
 
-.AboutMeBlockWrapper {
+$description-text-size-desktop: calc(0.6vw + 0.9vh);
+$description-text-size-tablet: calc(1vw + 0.9vh);
+
+.aboutMeBlockWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 60vh;
-  border: 1px solid red;
+  height: 92vh;
+
+  @media (max-width: $tablet-large) {
+    height: auto;
+    margin-bottom: 40px;
+  }
+}
+
+.aboutMeTitle {
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 42px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: white;
 }
 
 .content {
   width: 80%;
-  //height: 90%;
-  border: 1px solid blue;
+  height: 90%;
+
+  @media (max-width: $tablet-large) {
+    width: 90%;
+    height: 100%;
+  }
 }
 
 .aboutMeInfo {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $tablet-large) {
+    gap: 40px;
+    flex-direction: column;
+  }
 }
 
 .firstBlock {
   display: grid;
+  position: relative;
   width: 49.5%;
-  height: 50vh;
-  //border: 1px solid red;
-  grid-template-columns: 59% 39%;
+  height: 75vh;
+  grid-template-columns: 52% 46%;
   grid-template-rows: 69% 29%;
   gap: 2%;
 
-  div {
-    //border: 1px solid yellow;
+  @media (max-width: $tablet-large) {
+    width: 100%;
+    //height: 75vh;
+    height: 650px;
+    grid-template-columns: 55% 43%;
+    grid-template-rows: 70% 30%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: $gray-half-transparent;
+    right: -5px;
+
+    @media (max-width: $tablet-large) {
+      display: none;
+    }
   }
 
   div:last-child {
     grid-column: 1 / -1;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      width: 100%;
+      height: 1px;
+      background: $gray-half-transparent;
+    }
+  }
+}
+
+.firstText {
+  position: relative;
+  font-size: $description-text-size-desktop;
+
+  @media (max-width: $tablet-large) {
+    font-size: $description-text-size-tablet;
   }
 
-  .firstText {
-    font-size: 1.2vw;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: $gray-half-transparent;
+    right: -5px;
   }
 }
 
 .secondBlock {
   display: grid;
   width: 49.5%;
-  height: 50vh;
-  border: 1px solid red;
-  grid-template-columns: 59% 39%;
+  height: 75vh;
+  grid-template-columns: 46% 52%;
   grid-template-rows: 29% 69%;
   gap: 2%;
 
-  div {
-    //border: 1px solid yellow;
+  @media (max-width: $tablet-large) {
+    width: 100%;
+    height: 445px;
+    grid-template-columns: 46% 52%;
+    grid-template-rows: 100%;
+
+    .secondText {
+      order: 2;
+    }
+
+    .aboutMePhoto1 {
+      order: 1;
+    }
   }
 
   div:first-child {
     grid-column: 1 / -1;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      width: 100%;
+      height: 1px;
+      background: $gray-half-transparent;
+    }
   }
+}
+
+.secondText {
+  position: relative;
+  font-size: $description-text-size-desktop;
+
+  @media (max-width: $tablet-large) {
+    font-size: $description-text-size-tablet;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: $gray-half-transparent;
+    right: -5px;
+
+    @media (max-width: $tablet-large) {
+      left: -6px;
+      right: 0;
+    }
+  }
+}
+
+.secondLandscapeWrapper {
+  @media (max-width: $tablet-large) {
+    display: none;
+  };
+}
+
+.landscape {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  
+}
+
+.aboutMePhoto1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }

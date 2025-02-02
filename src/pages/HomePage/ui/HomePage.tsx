@@ -7,9 +7,9 @@ import AboutMeBlock from '@/widgets/AboutMeBlock';
 const HomePage = () => {
   return (
     <div>
-      <Hero />
-      <Portfolio />
-      <TarifsComponent />
+      {/*<Hero />*/}
+      {/*<Portfolio />*/}
+      {/*<TarifsComponent />*/}
       <AboutMeBlock />
     </div>
   );
